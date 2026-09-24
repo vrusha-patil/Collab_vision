@@ -28,20 +28,20 @@ function Services() {
           {servicesData.map((service, index) => (
             <div 
               key={service.id} 
-              className={`flip-card ${animate ? 'deal-animation' : ''}`}
+              className={`services-flip-card ${animate ? 'deal-animation' : ''}`}
               style={{ '--card-index': index }}
             >
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
+              <div className="services-flip-card-inner">
+                <div className="services-flip-card-front">
                   <div 
-                    className="flip-card-image" 
+                    className="services-flip-card-image" 
                     style={{ backgroundImage: `url(${service.image})` }}
                   ></div>
-                  <div className="flip-card-title-container">
+                  <div className="services-flip-card-title-container">
                     <h2>{service.title}</h2>
                   </div>
                 </div>
-                <div className="flip-card-back">
+                <div className="services-flip-card-back">
                   <h2>{service.title}</h2>
                   <p>{service.subtitle}</p>
                   <button 

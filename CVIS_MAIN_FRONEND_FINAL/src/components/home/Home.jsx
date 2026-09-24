@@ -46,8 +46,9 @@ import { useNavigate } from "react-router-dom";
 import Computer from "./Computer";
 import PriceCard from "./allCards/PriceCard";
 import React, { useEffect, useState, useRef } from "react";
+import TrainAnimation from "./TrainAnimation";
 
-const AnimatedLetters = ({ text }) => {
+const AnimatedLetters = ({ text, color = "#0a5a96" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
 
@@ -68,7 +69,7 @@ const AnimatedLetters = ({ text }) => {
     <h1
       ref={domRef}
       style={{
-        color: "#0a5a96",
+        color: color,
         margin: "5px",
         fontWeight: "900", // bold
         display: "inline-block",
@@ -205,22 +206,13 @@ function Home() {
         </div>
       </main>
 
-      <div className="cardsFlow " style={{ width: "100%" }}>
+      <div className="cardsFlow " style={{ width: "100%", overflowX: "hidden" }}>
         <div style={{ height: "auto" }}>
           {" "}
           <PriceCard></PriceCard>
         </div>{" "}
         <Cards />
-        <div className="mission" style={{ width: "100%", padding: "40px 0", backgroundColor: "#f9f9f9" }}>
-          <marquee scrollamount="12" style={{ width: "100%", display: "block" }}>
-            <div style={{ display: "flex", gap: "50px", paddingRight: "50px" }}>
-              <AnimatedLetters text="YOUR VISION IS OUR SOLUTION" />
-              <AnimatedLetters text="YOUR VISION IS OUR SOLUTION" />
-              <AnimatedLetters text="YOUR VISION IS OUR SOLUTION" />
-              <AnimatedLetters text="YOUR VISION IS OUR SOLUTION" />
-            </div>
-          </marquee>
-        </div>
+        <TrainAnimation />
         {/* <Steps></Steps> */}
       </div>
 

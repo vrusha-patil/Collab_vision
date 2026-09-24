@@ -33,7 +33,7 @@
 }
 
 /* Flip Card CSS */
-.flip-card {
+.services-flip-card {
   background-color: transparent;
   width: 320px;
   height: 400px;
@@ -41,7 +41,7 @@
   opacity: 0;
 }
 
-.flip-card-inner {
+.services-flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -52,11 +52,11 @@
   border-radius: 16px;
 }
 
-.flip-card:hover .flip-card-inner {
+.services-flip-card:hover .services-flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.services-flip-card-front, .services-flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -66,20 +66,20 @@
   overflow: hidden;
 }
 
-.flip-card-front {
+.services-flip-card-front {
   background-color: #fff;
   display: flex;
   flex-direction: column;
 }
 
-.flip-card-image {
+.services-flip-card-image {
   height: 70%;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
 
-.flip-card-title-container {
+.services-flip-card-title-container {
   height: 30%;
   display: flex;
   align-items: center;
@@ -89,13 +89,13 @@
   border-top: 1px solid #edf2f7;
 }
 
-.flip-card-front h2 {
+.services-flip-card-front h2 {
   font-size: 1.4rem;
   color: #2d3748;
   margin: 0;
 }
 
-.flip-card-back {
+.services-flip-card-back {
   background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
   color: white;
   transform: rotateY(180deg);
@@ -106,12 +106,12 @@
   padding: 30px;
 }
 
-.flip-card-back h2 {
+.services-flip-card-back h2 {
   font-size: 1.6rem;
   margin-bottom: 15px;
 }
 
-.flip-card-back p {
+.services-flip-card-back p {
   font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -237,7 +237,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .flip-card {
+  .services-flip-card {
     width: 100%;
     max-width: 350px;
   }
