@@ -26,6 +26,7 @@ import Ccpagecontent from "./components/learning_modules/learning_pages/ccpage";
 import Webdesign from "./components/cservices/servicepages/webdesign";
 import Products from "./components/products/Products";
 import Login from "./components/attributes/login";
+import ServiceDetail from "./components/cservices/ServiceDetail";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
@@ -92,6 +93,7 @@ function App() {
           <Route path="/contact" element={<Cont />} />
           <Route path="/products" element={<Products />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/detail/:id" element={<ServiceDetail />} />
           <Route path="/services/graphic" element={<Garphic />} />
           <Route path="/services/seopage" element={<Seopage />} />
           <Route path="/services/cloudpage" element={<Cloudcpage />} />
