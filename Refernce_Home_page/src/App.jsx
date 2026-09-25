@@ -5,7 +5,7 @@ import Home from "./components/home/Home";
 import Learning from "./components/learning_modules/Learning";
 import Navbar from "./components/attributes/Navbar";
 import Footer from "./components/attributes/Footer";
-import ChatbotWidget from "./components/attributes/ChatbotWidget";
+import GoToTop from "./components/attributes/GoToTop";
 import Ccpage from "./components/learning_modules/learning_pages/ccpage";
 import Softwaretestinfpage from "./components/learning_modules/learning_pages/softwaretestinfpage";
 import Ccmulesoft from "./components/learning_modules/learning_pages/ccmulesoft";
@@ -134,7 +134,7 @@ function App() {
           <Route path="/pricing/:category" element={<PricingCards />} />
           <Route path="/p" element={<ProductPrice />} />
         </Routes>
-        <ChatbotWidget />
+        <GoToTop />
         <Footer />
       </Router>
     </>

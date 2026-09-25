@@ -24,11 +24,11 @@ const Footer = () => {
         <div className="footer-col-glass nav-col">
           <h3>NAVIGATION</h3>
           <div className="footer-links-vert">
-            <Link to="/" onClick={() => window.scrollTo(0,0)}>Home</Link>
-            <Link to="/about" onClick={() => window.scrollTo(0,0)}>About Us</Link>
-            <Link to="/services" onClick={() => window.scrollTo(0,0)}>Services</Link>
-            <Link to="/products" onClick={() => window.scrollTo(0,0)}>Products</Link>
-            <Link to="/contact" onClick={() => window.scrollTo(0,0)}>Contact Us</Link>
+            <Link to="/">Home</Link>
+            <Link to="/about">About Us</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/products">Products</Link>
+            <Link to="/contact">Contact Us</Link>
           </div>
         </div>
 

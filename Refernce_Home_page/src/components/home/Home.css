@@ -1,0 +1,160 @@
+.mission {
+  font-size: 5vw; /* Responsive font size */
+  padding: 5vh 2vw; /* Responsive padding */
+  font-family: consolas;
+  text-align: center; /* Center align the text */
+}
+
+@media (max-width: 768px) {
+  .mission {
+    font-size: 6vw; /* Adjust font size for smaller screens */
+    padding: 4vh 2vw; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .mission {
+    font-size: 7vw; /* Adjust font size for very small screens */
+    padding: 3vh 2vw; /* Adjust padding for very small screens */
+  }
+}
+
+/* Main section styling */
+main {
+  top: 0px;
+  margin-top: -20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: transparent;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  top: 0px;
+  flex-direction: row;
+  align-items: flex-start; /* Aligns text with the top of the image */
+  justify-content: center; /* Pushes items together instead of spreading them */
+  width: 100%;
+  max-width: 1200px; /* Reduced max width */
+  gap: 20px; /* Small gap for a close fit */
+}
+
+/* Image styling */
+.container img {
+  width: 100%;
+  max-width: 380px; /* Extremely reduced max width for image */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero text styling */
+.hero-text {
+  max-width: 500px; /* Optional max width for the text */
+  text-align: left;
+  padding: 0px 20px 0px 20px;
+}
+
+.hero-text h1 {
+  font-size: 1.9rem; /* Extremely reduced font size */
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left;
+}
+
+.hero-text p {
+  font-size: 1rem; /* Smaller text */
+  margin-bottom: 12px; /* Highly reduced margin */
+  color: #666;
+}
+
+button {
+  padding: 1em 2em;
+  border-radius: 5px;
+  border: none;
+  background-color: #0075aa;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #0075aa;
+  border: 2px solid #0075aa;
+}
+
+/* Media queries */
+@media (max-width: 884px) {
+  .container {
+    flex-direction: column;
+  }
+  .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  main {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 678px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  main {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 428px) {
+  /* nav ul {
+    display: none;
+  } */
+  main {
+    margin-top: 0px;
+  }
+}
+
+/* #3ca9e2 */
+
+/* Hero Animations */
+@keyframes heroFadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeInLeft {
+  0% { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.hero-animate-text {
+  animation: heroFadeInUp 1s ease-out forwards;
+}
+
+.hero-animate-img {
+  animation: heroFadeInLeft 1s ease-out forwards;
+}
+
+/* Scrolling Mission Text */
+@keyframes scrollMission {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.scrolling-mission-text {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: scrollMission 15s linear infinite;
+}

@@ -41,12 +41,7 @@ import Ourfeedback from "./ourfeed/ourfeedback";
 import Navbar from "../attributes/Navbar";
 import Steps from "./Steps";
 import Testimonials from "./allCards/Testimonials";
-import HeroImg1 from "./hero_images/Hero.png";
-import HeroImg2 from "./hero_images/hero_2.jpg";
-import HeroImg3 from "./hero_images/hero_3.jpg";
-import HeroImg4 from "./hero_images/integration-services.jpg";
-import HeroImg5 from "./hero_images/mobile-app-development.jpg";
-import HeroImg6 from "./hero_images/seo.jpg";
+import Hero from "./Hero.png";
 import { useNavigate } from "react-router-dom";
 import Computer from "./Computer";
 import PriceCard from "./allCards/PriceCard";
@@ -95,65 +90,6 @@ const AnimatedLetters = ({ text, color = "#0a5a96" }) => {
         </span>
       ))}
     </h1>
-  );
-};
-
-const TypewriterEffect = ({ text }) => {
-  const [displayedText, setDisplayedText] = useState("");
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      if (i <= text.length) {
-        setDisplayedText(text.substring(0, i));
-      }
-      i++;
-      if (i > text.length + 30) { // pause at the end for about 1.5 seconds
-        i = 0;
-      }
-    }, 50);
-    return () => clearInterval(interval);
-  }, [text]);
-  return <span>{displayedText}</span>;
-};
-
-const HeroSlider = () => {
-  const images = [
-    HeroImg1,
-    HeroImg2,
-    HeroImg3,
-    HeroImg4,
-    HeroImg5,
-    HeroImg6
-  ];
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  return (
-    <div style={{ width: "100%", minWidth: "300px", maxWidth: "580px", height: "350px", position: "relative", overflow: "hidden", borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}>
-      {images.map((img, index) => (
-        <img
-          key={index}
-          src={img}
-          alt={`Slide ${index}`}
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            opacity: index === currentIndex ? 1 : 0,
-            transition: "opacity 1s ease-in-out"
-          }}
-        />
-      ))}
-    </div>
   );
 };
 
@@ -220,7 +156,7 @@ function Home() {
         <div className="container" style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "center", gap: "35px", width: "100%", maxWidth: "1200px" }}>
           {/* Background Grid removed as requested */}
           <div style={{ display: "flex", justifyContent: "flex-end", flexShrink: 0 }}>
-            <HeroSlider />
+            <img src={Hero} alt="Hero" style={{ width: "100%", maxWidth: "580px", height: "auto", borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }} />
           </div>
           <div style={{ position: "relative", zIndex: 2, display: "flex", justifyContent: "flex-start", marginTop: "-10px" }}>
             {/* Spot Color Behind Text */}
@@ -242,8 +178,8 @@ function Home() {
 
             {/* Text Content */}
             <div className="hero-text" style={{ position: "relative", maxWidth: "550px", padding: "0 10px" }}>
-              <h1 style={{ fontSize: "2.7rem", lineHeight: "1.1", marginBottom: "15px", color: "#111", fontWeight: "800", textAlign: "left", minHeight: "90px" }}>
-                <TypewriterEffect text="Transform Your Operations with Advanced Software Solutions" />
+              <h1 style={{ fontSize: "2.7rem", lineHeight: "1.1", marginBottom: "15px", color: "#111", fontWeight: "800", textAlign: "left" }}>
+                Transform Your Operations with Advanced Software Solutions
               </h1>
               <p style={{ fontSize: "1.1rem", lineHeight: "1.5", marginBottom: "25px", color: "#444", textAlign: "left" }}>
                 Scale efficiently, streamline workflows, and future-proof your business. Our custom automation and state-of-the-art software technologies eliminate bottlenecks and drive measurable efficiency so your team can focus on growth.
